@@ -1,0 +1,435 @@
+/* Global Styles */
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --success-color: #28a745;
+  --danger-color: #dc3545;
+  --warning-color: #ffc107;
+  --info-color: #17a2b8;
+  --light-color: #f8f9fa;
+  --dark-color: #343a40;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f8f9fa;
+}
+
+/* Custom Component Styles */
+.fruit-item, .flesh-item, .sin-item, .armor-item {
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.fruit-item:hover, .flesh-item:hover, .sin-item:hover, .armor-item:hover {
+  transform: translateY(-2px);
+}
+
+.flesh-item:hover {
+  background-color: #316CF4;
+  color: white;
+}
+
+.armor-item:hover {
+  background-color: #ffc107;
+  color: white;
+}
+
+.fruit-item.selected {
+  background-color: var(--success-color);
+  color: white;
+}
+
+.flesh-item.selected {
+  background-color: #316CF4;
+  color: white;
+}
+
+.sin-item {
+  background-color: white;
+}
+
+.sin-item:hover {
+  background-color: #dc3545;
+  color: white;
+  box-shadow: none;
+  transform: none;
+  padding: 0;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.sin-item.selected {
+  background-color: #dc3545;
+  border-color: #c82333;
+  color: white;
+}
+
+/* Sins section form container styling */
+.sins-form-container {
+  background-color: #ffe6e6 !important;
+  border-radius: 8px !important;
+  padding: 1rem 1rem !important;
+  margin-bottom: 1rem !important;
+  max-width: 520px !important;
+}
+
+/* Fruits section form container styling */
+.fruits-form-container {
+  background-color: #e8f5e8 !important;
+  border-radius: 8px !important;
+  padding: 1rem 1rem !important;
+  margin-bottom: 1rem !important;
+  max-width: 520px !important;
+}
+
+/* Flesh section form container styling */
+.flesh-form-container {
+  background-color: #e3f2fd !important;
+  border-radius: 8px !important;
+  padding: 1rem 1rem !important;
+  margin-bottom: 1rem !important;
+  max-width: 520px !important;
+}
+
+/* Armor section form container styling */
+.armor-form-container {
+  background-color: #fff8e1 !important;
+  border-radius: 8px !important;
+  padding: 1rem 1rem !important;
+  margin-bottom: 1rem !important;
+  max-width: 520px !important;
+}
+
+/* Sins modal header styling */
+.sins-modal-header {
+  background-color: #dc3545 !important;
+  color: white !important;
+}
+
+/* More specific selector for modal header */
+.modal-header.sins-modal-header {
+  background-color: #dc3545 !important;
+  color: white !important;
+}
+
+/* Even more specific for the header element */
+.modal .modal-header.sins-modal-header {
+  background-color: #dc3545 !important;
+  color: white !important;
+}
+
+/* Override the global modal-header gradient for sins modal */
+.modal-header {
+  background: linear-gradient(135deg, var(--primary-color), #0056b3);
+  color: white;
+  border-bottom: none;
+}
+
+/* Specific override for sins modal header */
+.modal-header[style*="background-color: #dc3545"] {
+  background: #dc3545 !important;
+  background-image: none !important;
+  color: white !important;
+}
+
+/* Alternative approach - target the specific modal */
+.modal.show .modal-header {
+  background: #dc3545 !important;
+  background-image: none !important;
+  color: white !important;
+}
+
+/* Fruits modal specific override */
+.fruits-definitions-modal.show .modal-header {
+  background: #28a744 !important;
+  background-image: none !important;
+  color: white !important;
+}
+
+/* Flesh modal specific override */
+.flesh-definitions-modal.show .modal-header {
+  background: #316CF4 !important;
+  background-image: none !important;
+  color: white !important;
+}
+
+/* Armor modal specific override */
+.armor-definitions-modal.show .modal-header {
+  background: #ffc107 !important;
+  background-image: none !important;
+  color: white !important;
+}
+
+/* Install PWA modal specific override */
+.install-pwa-modal.show .modal-header {
+  background: #0d6efd !important;
+  background-image: none !important;
+  color: white !important;
+}
+
+/* Very specific override for sins definitions modal */
+.sins-definitions-modal .modal-header {
+  background: #dc3545 !important;
+  background-image: none !important;
+  color: white !important;
+}
+
+/* Most specific override */
+.sins-definitions-modal .modal-header[style*="background-color: #dc3545"] {
+  background: #dc3545 !important;
+  background-image: none !important;
+  color: white !important;
+}
+
+/* Fruits modal header styling */
+.fruits-definitions-modal .modal-header {
+  background: #28a744 !important;
+  background-image: none !important;
+  color: white !important;
+}
+
+
+
+/* Flesh modal header styling */
+.flesh-definitions-modal .modal-header {
+  background: #316CF4 !important;
+  background-image: none !important;
+  color: white !important;
+}
+
+/* Armor modal header styling */
+.armor-definitions-modal .modal-header {
+  background: #ffc107 !important;
+  background-image: none !important;
+  color: white !important;
+}
+
+/* Custom badge colors */
+.badge.bg-success {
+  background-color: #28a744 !important;
+}
+
+.badge.bg-info {
+  background-color: #316CF4 !important;
+}
+
+/* Info button styling */
+.sins-form-container .btn-link {
+  transition: color 0.3s ease;
+}
+
+.sins-form-container .btn-link:hover {
+  color: #dc3545 !important;
+}
+
+.armor-item.selected {
+  background-color: #ffc107;
+  color: white;
+}
+
+/* Navigation Tabs */
+.nav-tabs {
+  border-bottom: none !important;
+}
+
+.nav-tabs .nav-link {
+  border: none;
+  border-bottom: 3px solid transparent;
+  color: var(--secondary-color);
+  font-weight: 500;
+  padding: 0.75rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.nav-tabs .nav-link:hover {
+  border-bottom-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.nav-tabs .nav-link.active {
+  border-bottom-color: var(--primary-color);
+  color: var(--primary-color);
+  background-color: transparent;
+}
+
+/* Progress Indicators */
+.progress-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin: 0 auto;
+}
+
+.progress-circle.fruits {
+  background: linear-gradient(45deg, #28a744, #20c997);
+  color: white;
+}
+
+.progress-circle.flesh {
+  background: linear-gradient(45deg, #316CF4, #2a5bd9);
+  color: white;
+}
+
+.progress-circle.sins {
+  background: linear-gradient(45deg, var(--danger-color), #e74c3c);
+  color: white;
+}
+
+.progress-circle.armor {
+  background: linear-gradient(45deg, #ffc107, #e0a800);
+  color: white;
+}
+
+/* Modal Styles */
+.modal-header {
+  background: linear-gradient(135deg, var(--primary-color), #0056b3);
+  color: white;
+  border-bottom: none;
+}
+
+.modal-header .btn-close {
+  filter: invert(1);
+}
+
+/* Welcome Modal specific override */
+.welcome-modal .modal-header {
+  background: #0d6efd !important;
+  background-image: none !important;
+  color: white !important;
+}
+
+/* Override the global .modal.show .modal-header rule for WelcomeModal */
+.welcome-modal.show .modal-header {
+  background: #0d6efd !important;
+  background-image: none !important;
+  color: white !important;
+}
+
+/* Chart Container */
+.chart-container {
+  position: relative;
+  height: 400px;
+  margin: 20px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  .nav-tabs .nav-link {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+  }
+  
+  .progress-circle {
+    width: 50px;
+    height: 50px;
+    font-size: 1rem;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1a1a1a;
+    color: #ffffff;
+  }
+  
+  .card {
+    background-color: #2d2d2d;
+    border-color: #404040;
+  }
+  
+  .bg-light {
+    background-color: #2d2d2d !important;
+  }
+  
+  .text-muted {
+    color: #b0b0b0 !important;
+  }
+}
+
+/* Animation Classes */
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hide all checkboxes - Comprehensive rules */
+.form-check-input,
+input[type="checkbox"],
+.form-check input[type="checkbox"],
+.fruit-item .form-check-input,
+.flesh-item .form-check-input,
+.sin-item .form-check-input,
+.armor-item .form-check-input {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  position: absolute !important;
+  left: -9999px !important;
+  clip: rect(0, 0, 0, 0) !important;
+  pointer-events: none !important;
+}
+
+/* Hide checkbox-related pseudo-elements */
+.form-check-input:before,
+.form-check-input:after {
+  display: none !important;
+  content: none !important;
+}
+
+/* Ensure form-check labels are properly styled */
+.form-check-label {
+  cursor: pointer;
+  font-weight: 500;
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+  display: block !important;
+  width: 100% !important;
+}
+
+.form-check {
+  padding-left: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* Print Styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  .container {
+    max-width: none !important;
+  }
+}

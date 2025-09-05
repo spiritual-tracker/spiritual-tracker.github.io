@@ -1,0 +1,21 @@
+{
+  "name": "spiritual-tracker-shared",
+  "version": "1.0.0",
+  "description": "Shared utilities and constants for Spiritual Tracker",
+  "private": true,
+  "main": "index.js",
+  "exports": {
+    "./utils/dateUtils": "./utils/dateUtils.js",
+    "./utils/dateUtils.rn": "./utils/dateUtils.rn.js",
+    "./constants/data": "./constants/data.js"
+  },
+  "keywords": [
+    "spiritual",
+    "tracker",
+    "shared",
+    "utilities",
+    "constants"
+  ],
+  "author": "",
+  "license": "MIT"
+} 

@@ -1,0 +1,56 @@
+{
+  "name": "spiritual-tracker",
+  "version": "1.0.0",
+  "description": "Spiritual Tracker - Comprehensive spiritual growth tracking PWA",
+  "private": true,
+  "workspaces": [
+    "web"
+  ],
+  "scripts": {
+    "install": "npm run web:install",
+    "start": "npm run web:start",
+    "build": "npm run web:build",
+    "test": "npm run web:test",
+    "lint": "npm run web:lint",
+    "web:install": "cd web && npm install",
+    "web:start": "cd web && npm start",
+    "web:build": "cd web && npm run build",
+    "web:test": "cd web && npm test",
+    "web:lint": "cd web && npm run lint",
+    "clean": "rm -rf node_modules web/node_modules",
+    "cleanup": "./scripts/cleanup.sh",
+    "deploy": "./scripts/deploy.sh"
+  },
+  "keywords": [
+    "spiritual",
+    "tracker",
+    "growth",
+    "fruits",
+    "flesh",
+    "sins",
+    "armor",
+    "christian",
+    "faith",
+    "pwa",
+    "web",
+    "notifications",
+    "analytics"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "prettier": "^3.5.3"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "overrides": {
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "*": {
+      "react": "18.3.1",
+      "react-dom": "18.3.1"
+    }
+  }
+} 
