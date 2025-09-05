@@ -206,6 +206,10 @@ function AppContent() {
                   width: '48px', 
                   height: '48px'
                 }}
+                onError={(e) => {
+                  console.log('Icon failed to load:', e.target.src);
+                  e.target.style.display = 'none';
+                }}
               />
             </div>
           </div>
