@@ -7,7 +7,6 @@
     "web"
   ],
   "scripts": {
-    "install": "npm run web:install",
     "start": "npm run web:start",
     "build": "npm run web:build",
     "test": "npm run web:test",
@@ -18,8 +17,7 @@
     "web:test": "cd web && npm test",
     "web:lint": "cd web && npm run lint",
     "clean": "rm -rf node_modules web/node_modules",
-    "cleanup": "./scripts/cleanup.sh",
-    "deploy": "./scripts/deploy.sh"
+    "cleanup": "./scripts/cleanup.sh"
   },
   "keywords": [
     "spiritual",
