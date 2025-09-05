@@ -62,9 +62,18 @@
           var decoded = l.search.slice(1).split('&').map(function(s) { 
             return s.replace(/~and~/g, '&')
           }).join('?');
-          window.history.replaceState(null, null,
-              l.pathname.slice(0, -1) + decoded + l.hash
-          );
+          
+          // Clean up any corrupted URLs with multiple ~and~ sequences
+          decoded = decoded.replace(/~and~+/g, '&');
+          
+          // If the URL is too corrupted, just go to the root
+          if (decoded.indexOf('~and~') !== -1) {
+            window.history.replaceState(null, null, '/');
+          } else {
+            window.history.replaceState(null, null,
+                l.pathname.slice(0, -1) + decoded + l.hash
+            );
+          }
         }
       }(window.location))
     </script>
