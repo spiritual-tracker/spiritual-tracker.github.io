@@ -206,8 +206,7 @@ function AppContent() {
                 style={{ 
                   width: '64px', 
                   height: '64px',
-                  borderRadius: '12px',
-                  boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
+                  borderRadius: '12px'
                 }}
                 onError={(e) => {
                   console.log('Icon failed to load:', e.target.src);
