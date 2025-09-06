@@ -201,7 +201,7 @@ function AppContent() {
           <div className="row justify-content-center py-3">
             <div className="col-auto text-center">
               <img 
-                src="%PUBLIC_URL%/static/icons/icon-96x96.png" 
+                src="%PUBLIC_URL%/icons/icon-96x96.png" 
                 alt="Spiritual Tracker Icon" 
                 style={{ 
                   width: '64px', 
