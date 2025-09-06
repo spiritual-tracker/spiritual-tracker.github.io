@@ -197,14 +197,17 @@ function AppContent() {
       {/* Navigation Header */}
       <header className="border-bottom shadow-sm" style={{ backgroundColor: '#FBFBFB' }}>
         <div className="container">
-          <div className="row align-items-center justify-content-center">
-            <div className="col-auto">
+          {/* App Icon - Centered above navigation */}
+          <div className="row justify-content-center py-3">
+            <div className="col-auto text-center">
               <img 
-                src="/icons/icon-48x48.png" 
+                src="/icons/icon-96x96.png" 
                 alt="Spiritual Tracker Icon" 
                 style={{ 
-                  width: '48px', 
-                  height: '48px'
+                  width: '64px', 
+                  height: '64px',
+                  borderRadius: '12px',
+                  boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
                 }}
                 onError={(e) => {
                   console.log('Icon failed to load:', e.target.src);
@@ -213,6 +216,7 @@ function AppContent() {
               />
             </div>
           </div>
+          {/* Navigation Tabs */}
           <div className="row">
             <div className="col-12">
               <NavigationTabs 
