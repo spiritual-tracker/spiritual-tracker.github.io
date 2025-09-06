@@ -1,7 +1,7 @@
 {
   "name": "spiritual-tracker-web",
   "version": "1.0.0",
-  "description": "Spiritual Tracker - Web PWA version",
+  "description": "Spiritual Tracker - Comprehensive spiritual growth tracking Web PWA",
   "homepage": "https://spiritual-tracker.github.io",
   "private": true,
   "dependencies": {
