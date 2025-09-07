@@ -53,6 +53,25 @@
     />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <title>Spiritual Tracker</title>
+    
+    <!-- Prevent rubber banding/overscroll on mobile devices -->
+    <style>
+      html, body {
+        overscroll-behavior: none;
+        -webkit-overflow-scrolling: touch;
+        overflow-x: hidden;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+      }
+      
+      #root {
+        height: 100vh;
+        overflow-y: auto;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
+      }
+    </style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
